@@ -1,0 +1,37 @@
+{
+  "description": "SYNTHETIC teaching cases ONLY, not medical records; null means unknown, false means explicitly not present.",
+  "cases": [
+    {
+      "case_id": "SYN-T790M-001", "synthetic": true, "cancer_type": "NSCLC", "gene": "EGFR",
+      "variants": ["T790M"], "age_group": "adult", "disease_stage": "metastatic", "histology": "adenocarcinoma",
+      "treatment_line": "later_line", "prior_egfr_tki": true, "prior_treatment_line": "first_line",
+      "prior_drugs": ["gefitinib"], "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true, "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null, "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-L858R-002", "synthetic": true, "cancer_type": "NSCLC", "gene": "EGFR",
+      "variants": ["L858R"], "age_group": "adult", "disease_stage": "metastatic", "histology": "adenocarcinoma",
+      "treatment_line": "first_line", "prior_egfr_tki": false, "prior_treatment_line": null,
+      "prior_drugs": [], "progression_on_or_after_egfr_tki": false,
+      "progression_during_first_line_egfr_tki": false, "progression_after_prior_drug": false,
+      "fda_approved_egfr_test": true, "fda_approved_t790m_test": false
+    },
+    {
+      "case_id": "SYN-T790M-UNKNOWN-003", "synthetic": true, "cancer_type": "NSCLC", "gene": "EGFR",
+      "variants": ["T790M"], "age_group": "adult", "disease_stage": "metastatic", "histology": null,
+      "treatment_line": null, "prior_egfr_tki": null, "prior_treatment_line": null,
+      "prior_drugs": null, "progression_on_or_after_egfr_tki": null,
+      "progression_during_first_line_egfr_tki": null, "progression_after_prior_drug": null,
+      "fda_approved_egfr_test": null, "fda_approved_t790m_test": null
+    },
+    {
+      "case_id": "SYN-T790M-NO-PRIOR-004", "synthetic": true, "cancer_type": "NSCLC", "gene": "EGFR",
+      "variants": ["T790M"], "age_group": "adult", "disease_stage": "metastatic", "histology": "adenocarcinoma",
+      "treatment_line": "first_line", "prior_egfr_tki": false, "prior_treatment_line": null,
+      "prior_drugs": [], "progression_on_or_after_egfr_tki": false,
+      "progression_during_first_line_egfr_tki": false, "progression_after_prior_drug": false,
+      "fda_approved_egfr_test": null, "fda_approved_t790m_test": true
+    }
+  ]
+}

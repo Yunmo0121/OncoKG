@@ -1,0 +1,21 @@
+# Python environment
+**/.venv/
+**/__pycache__/
+*.pyc
+
+# API keys and credentials
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Local files
+.DS_Store
+*.log
+*.zip
+
+# Research data pending review
+data/raw/
+data/curated/
+docs/results/

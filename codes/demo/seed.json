@@ -1,0 +1,41 @@
+{
+  "manifest": {"schema_version": "0.1", "snapshot_id": "DEMO:oncokg-0.1", "mode": "DEMO"},
+  "genes": [{"id": "HGNC:3236", "symbol": "EGFR"}],
+  "variants": [
+    {"id": "HGVS:NM_005228.5:c.2573T>G", "gene_id": "HGNC:3236", "hgvs_c": "NM_005228.5:c.2573T>G", "protein_label": "p.Leu858Arg"},
+    {"id": "HGVS:NM_005228.5:c.2369C>T", "gene_id": "HGNC:3236", "hgvs_c": "NM_005228.5:c.2369C>T", "protein_label": "p.Thr790Met"}
+  ],
+  "diseases": [{"id": "ONCOTREE:NSCLC", "code": "NSCLC", "name": "Non-Small Cell Lung Cancer"}],
+  "drugs": [
+    {"id": "DEMO:DRUG_A", "name": "Demo Drug A"},
+    {"id": "DEMO:DRUG_B", "name": "Demo Drug B"}
+  ],
+  "claims": [
+    {
+      "id": "DEMO:S_A", "kind": "SENSITIVITY", "disease_id": "ONCOTREE:NSCLC", "drug_id": "DEMO:DRUG_A",
+      "setting": "METASTATIC", "line": "2L", "region": "ANY",
+      "variant_ids": ["HGVS:NM_005228.5:c.2573T>G"], "evidence_ids": ["DEMO:E01"]
+    },
+    {
+      "id": "DEMO:S_B", "kind": "SENSITIVITY", "disease_id": "ONCOTREE:NSCLC", "drug_id": "DEMO:DRUG_B",
+      "setting": "METASTATIC", "line": "2L", "region": "ANY",
+      "variant_ids": ["HGVS:NM_005228.5:c.2573T>G"], "evidence_ids": ["DEMO:E02"]
+    },
+    {
+      "id": "DEMO:R_A", "kind": "RESISTANCE", "disease_id": "ONCOTREE:NSCLC", "drug_id": "DEMO:DRUG_A",
+      "setting": "METASTATIC", "line": "2L", "region": "ANY", "prior_drug_id": "DEMO:DRUG_A",
+      "variant_ids": ["HGVS:NM_005228.5:c.2369C>T", "HGVS:NM_005228.5:c.2573T>G"], "evidence_ids": ["DEMO:E03"]
+    },
+    {
+      "id": "DEMO:C_B", "kind": "CONTRAINDICATION", "disease_id": "ONCOTREE:NSCLC", "drug_id": "DEMO:DRUG_B",
+      "setting": "ANY", "line": "ANY", "region": "ANY", "condition_code": "DEMO:CONDITION_X",
+      "variant_ids": [], "evidence_ids": ["DEMO:E04"]
+    }
+  ],
+  "evidence": [
+    {"id": "DEMO:E01", "source": "FIXTURE", "release": "0.1", "record_id": "S_A", "locator": "/claims/0"},
+    {"id": "DEMO:E02", "source": "FIXTURE", "release": "0.1", "record_id": "S_B", "locator": "/claims/1"},
+    {"id": "DEMO:E03", "source": "FIXTURE", "release": "0.1", "record_id": "R_A", "locator": "/claims/2"},
+    {"id": "DEMO:E04", "source": "FIXTURE", "release": "0.1", "record_id": "C_B", "locator": "/claims/3"}
+  ]
+}

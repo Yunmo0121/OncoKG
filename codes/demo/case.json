@@ -1,0 +1,13 @@
+{
+  "disease_id": "ONCOTREE:NSCLC",
+  "setting": "METASTATIC",
+  "line": "2L",
+  "region": "CN",
+  "variants": {
+    "HGVS:NM_005228.5:c.2573T>G": true,
+    "HGVS:NM_005228.5:c.2369C>T": true
+  },
+  "conditions": {"DEMO:CONDITION_X": true},
+  "history": [{"drug_id": "DEMO:DRUG_A", "outcome": "PROGRESSION"}],
+  "history_complete": true
+}
