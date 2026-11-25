@@ -38,7 +38,7 @@ The LLM generation stage is **optional and still under integration**. An offline
 | Safety-evidence triage | Initial rule-based prototype; **not** clinical safety validation |
 | Deterministic JSON / Markdown reporting | Demo completed |
 | External LLM adapter | Local tests complete; live API integration in progress |
-| Independent benchmark / baseline / ablation study | Planned / in development |
+| Evaluation | Offline engineering regression and synthetic retrieval pilot implemented. Independent labels and formal comparisons are pending. |
 
 **Illustrative local graph snapshot (Schema v0.2):** 23 nodes, 32 relationships, and 5 evidence claims. These counts describe a small prototype, **not** a comprehensive clinical knowledge base or performance benchmark.
 
@@ -58,7 +58,7 @@ OncoKG/
 │   └── test_*.py
 ├── data/
 │   └── samples/               # Synthetic examples only
-├── docs/                       # Design and protocol notes as released
+├── docs/                       # Design and evaluation protocol
 ├── .gitignore
 └── README.md
 ```
@@ -67,12 +67,13 @@ Some research inputs and results, including `data/curated/` and `docs/results/`,
 
 ## Getting started
 
-Requirements: **Python 3**, the packages needed by each script (notably `neo4j` for database access), and **Neo4j Desktop** for graph-backed workflows. Commands below are run from the repository root.
+Requirements: **Python 3.10+**. Graph-backed workflows also use a Neo4j server (for example, Neo4j Desktop) and the Python driver. Commands below are run from the repository root.
 
 ```bash
 python3 -m venv codes/demo/.venv
 source codes/demo/.venv/bin/activate
-python -m pip install neo4j
+# Required for Neo4j-backed commands
+python -m pip install neo4j==5.28.2
 ```
 
 ### Example: local demo validation
@@ -102,6 +103,35 @@ python codes/demo/mock_report.py \
 ```
 
 **Do not commit API keys, local passwords, real patient data, or unapproved source files.** Live model calls are optional, may be rate-limited, and require an appropriately configured provider account.
+
+## Offline evaluation
+
+Task 07A checks four existing synthetic development cases against fixed engineering expectations. The separate retrieval pilot compares a lexical BM25 baseline, variant-only reranking and full context reranking over eight new developer-annotated synthetic cases. Both runs use approved local curated evidence files. The pilot uses no external model or database connection.
+
+```bash
+python codes/demo/benchmark_task07.py --offline
+python codes/demo/task07_retrieval_pilot.py --k 3
+```
+
+See the [Task 07 protocol](docs/task07_protocol_v0_1.md) for inputs, denominators, ablations and the independent evaluation design.
+
+### Retrieval experiments
+
+- [Task 15 retrieval comparison](docs/task15_retrieval_comparison.md) runs BM25,
+  MiniLM, rank fusion and Neo4j path and context rankings on the same development cases.
+- [Task 16 retrieval audit](docs/task16_retrieval_audit.md) recomputes metrics
+  across cutoffs and checks how individual cases affect the paired comparisons.
+
+- [Task 17 report experiment](docs/task17_report_context.md) projects each
+  ranking into a local research report with source and missing-field checks.
+- [Task 23 review-support audit](docs/task23_review_support.md) tests a
+  conservative evidence selection rule at a fixed three-row report budget.
+- [Task 24 applicability-limit counterexample](docs/task24_applicability_limits.md)
+  checks when a sourced eligibility note should keep its report slot.
+- [Task 25 trial applicability demo](docs/task25_trial_applicability.md) uses
+  structured trial and population identifiers to qualify report outcomes.
+- [Task 26 presentation bundle](docs/task26_applicability_demo.md) replays the
+  Task 23–25 comparison and packages all synthetic inputs and reports.
 
 ## Evidence handling and limitations
 

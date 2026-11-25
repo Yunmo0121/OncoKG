@@ -1,0 +1,277 @@
+{
+  "review_set_id": "ONCOKG-SYN-REVIEW-V0.1",
+  "cases": [
+    {
+      "case_id": "SYN-REVIEW-01",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "L858R"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "first_line",
+      "prior_egfr_tki": false,
+      "prior_treatment_line": null,
+      "prior_drugs": [],
+      "progression_on_or_after_egfr_tki": false,
+      "progression_during_first_line_egfr_tki": false,
+      "progression_after_prior_drug": false,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": false
+    },
+    {
+      "case_id": "SYN-REVIEW-02",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "erlotinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-03",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "gefitinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": false,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-04",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "advanced",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "second_line",
+      "prior_drugs": [
+        "afatinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": false,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-05",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "L858R",
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "erlotinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": true,
+      "fda_approved_t790m_test": null
+    },
+    {
+      "case_id": "SYN-REVIEW-06",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": null,
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": false
+    },
+    {
+      "case_id": "SYN-REVIEW-07",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "L858R"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "first_line",
+      "prior_egfr_tki": false,
+      "prior_treatment_line": null,
+      "prior_drugs": [],
+      "progression_on_or_after_egfr_tki": false,
+      "progression_during_first_line_egfr_tki": false,
+      "progression_after_prior_drug": false,
+      "fda_approved_egfr_test": false,
+      "fda_approved_t790m_test": false
+    },
+    {
+      "case_id": "SYN-REVIEW-08",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "erlotinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": false
+    },
+    {
+      "case_id": "SYN-REVIEW-09",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "gefitinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": null,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-10",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "second_line",
+      "prior_drugs": [
+        "afatinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": false,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-11",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "L858R",
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "erlotinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": true,
+      "fda_approved_t790m_test": true
+    },
+    {
+      "case_id": "SYN-REVIEW-12",
+      "synthetic": true,
+      "cancer_type": "NSCLC",
+      "gene": "EGFR",
+      "variants": [
+        "T790M"
+      ],
+      "age_group": "adult",
+      "disease_stage": "metastatic",
+      "histology": "adenocarcinoma",
+      "treatment_line": "later_line",
+      "prior_egfr_tki": true,
+      "prior_treatment_line": "first_line",
+      "prior_drugs": [
+        "afatinib"
+      ],
+      "progression_on_or_after_egfr_tki": true,
+      "progression_during_first_line_egfr_tki": true,
+      "progression_after_prior_drug": true,
+      "fda_approved_egfr_test": null,
+      "fda_approved_t790m_test": false
+    }
+  ]
+}
